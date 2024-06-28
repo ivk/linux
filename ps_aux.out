@@ -1,0 +1,356 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0 168896 13472 ?        Ss   июн24   3:46 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    июн24   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   июн24   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   июн24   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   июн24   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   июн24   0:00 [netns]
+root          11  0.0  0.0      0     0 ?        I<   июн24   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    июн24   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    июн24   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    июн24   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    июн24   0:09 [ksoftirqd/0]
+root          16  0.0  0.0      0     0 ?        I    июн24   4:56 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/2]
+root          21  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/2]
+root          22  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/2]
+root          23  0.0  0.0      0     0 ?        S    июн24   0:03 [ksoftirqd/2]
+root          26  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/4]
+root          27  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/4]
+root          28  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/4]
+root          29  0.0  0.0      0     0 ?        S    июн24   0:02 [ksoftirqd/4]
+root          32  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/6]
+root          33  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/6]
+root          34  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/6]
+root          35  0.0  0.0      0     0 ?        S    июн24   0:02 [ksoftirqd/6]
+root          38  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/1]
+root          39  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/1]
+root          40  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/1]
+root          41  0.0  0.0      0     0 ?        S    июн24   0:04 [ksoftirqd/1]
+root          44  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/3]
+root          45  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/3]
+root          46  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/3]
+root          47  0.0  0.0      0     0 ?        S    июн24   0:02 [ksoftirqd/3]
+root          50  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/5]
+root          51  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/5]
+root          52  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/5]
+root          53  0.0  0.0      0     0 ?        S    июн24   0:02 [ksoftirqd/5]
+root          56  0.0  0.0      0     0 ?        S    июн24   0:00 [cpuhp/7]
+root          57  0.0  0.0      0     0 ?        S    июн24   0:00 [idle_inject/7]
+root          58  0.0  0.0      0     0 ?        S    июн24   0:01 [migration/7]
+root          59  0.0  0.0      0     0 ?        S    июн24   0:03 [ksoftirqd/7]
+root          62  0.0  0.0      0     0 ?        S    июн24   0:00 [kdevtmpfs]
+root          63  0.0  0.0      0     0 ?        I<   июн24   0:00 [inet_frag_wq]
+root          65  0.0  0.0      0     0 ?        S    июн24   0:00 [kauditd]
+root          66  0.0  0.0      0     0 ?        S    июн24   0:00 [khungtaskd]
+root          67  0.0  0.0      0     0 ?        S    июн24   0:00 [oom_reaper]
+root          69  0.0  0.0      0     0 ?        I<   июн24   0:00 [writeback]
+root          70  0.0  0.0      0     0 ?        S    июн24   0:40 [kcompactd0]
+root          71  0.0  0.0      0     0 ?        SN   июн24   0:00 [ksmd]
+root          72  0.0  0.0      0     0 ?        SN   июн24   0:04 [khugepaged]
+root          73  0.0  0.0      0     0 ?        I<   июн24   0:00 [kintegrityd]
+root          74  0.0  0.0      0     0 ?        I<   июн24   0:00 [kblockd]
+root          75  0.0  0.0      0     0 ?        I<   июн24   0:00 [blkcg_punt_bio]
+root          78  0.0  0.0      0     0 ?        I<   июн24   0:00 [tpm_dev_wq]
+root          79  0.0  0.0      0     0 ?        I<   июн24   0:00 [ata_sff]
+root          80  0.0  0.0      0     0 ?        I<   июн24   0:00 [md]
+root          81  0.0  0.0      0     0 ?        I<   июн24   0:00 [md_bitmap]
+root          82  0.0  0.0      0     0 ?        I<   июн24   0:00 [edac-poller]
+root          83  0.0  0.0      0     0 ?        I<   июн24   0:00 [devfreq_wq]
+root          85  0.0  0.0      0     0 ?        S    июн24   0:00 [watchdogd]
+root          87  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/25-AMD-Vi]
+root          88  0.0  0.0      0     0 ?        S    июн24   0:24 [kswapd0]
+root          89  0.0  0.0      0     0 ?        S    июн24   0:00 [ecryptfs-kthread]
+root          90  0.0  0.0      0     0 ?        I<   июн24   0:00 [kthrotld]
+root          91  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/26-aerdrv]
+root          92  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/26-pciehp]
+root          93  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/27-aerdrv]
+root          94  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/28-aerdrv]
+root          95  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/29-aerdrv]
+root          96  0.0  0.0      0     0 ?        S    июн24   0:00 [irq/31-aerdrv]
+root         101  0.0  0.0      0     0 ?        I<   июн24   0:00 [acpi_thermal_pm]
+root         102  0.0  0.0      0     0 ?        I<   июн24   0:00 [mld]
+root         103  0.0  0.0      0     0 ?        I<   июн24   0:00 [ipv6_addrconf]
+root         110  0.0  0.0      0     0 ?        I<   июн24   0:00 [kstrp]
+root         118  0.0  0.0      0     0 ?        I<   июн24   0:00 [charger_manager]
+root         167  0.0  0.0      0     0 ?        S    июн24   0:02 [irq/32-ELAN050A:00]
+root         206  0.0  0.0      0     0 ?        I<   июн24   0:00 [nvme-wq]
+root         207  0.0  0.0      0     0 ?        I<   июн24   0:00 [nvme-reset-wq]
+root         209  0.0  0.0      0     0 ?        I<   июн24   0:00 [nvme-delete-wq]
+root         210  0.0  0.0      0     0 ?        I<   июн24   0:00 [nvme-auth-wq]
+root         211  0.0  0.0      0     0 ?        S    июн24   0:00 [scsi_eh_0]
+root         212  0.0  0.0      0     0 ?        I<   июн24   0:00 [scsi_tmf_0]
+root         294  0.0  0.0      0     0 ?        S    июн24   0:26 [jbd2/nvme0n1p2-8]
+root         295  0.0  0.0      0     0 ?        I<   июн24   0:00 [ext4-rsv-conver]
+root         339  0.0  0.2  90152 32480 ?        S<s  июн24   0:11 /lib/systemd/systemd-journald
+root         426  0.0  0.0  27364  4620 ?        Ss   июн24   0:05 /lib/systemd/systemd-udevd
+root         541  0.0  0.0      0     0 ?        S    июн24   0:00 [ccp-1-q2]
+root         542  0.0  0.0      0     0 ?        S    июн24   0:00 [ccp-1-q3]
+root         543  0.0  0.0      0     0 ?        S    июн24   0:00 [ccp-1-q4]
+root         544  0.0  0.0      0     0 ?        S    июн24   0:00 [hwrng]
+root         572  0.0  0.0      0     0 ?        I<   июн24   0:00 [cfg80211]
+root         599  0.0  0.0      0     0 ?        I<   июн24   0:00 [cryptd]
+root         607  0.1  0.0      0     0 ?        S    июн24   7:25 [irq/77-iwlwifi]
+systemd+     721  0.0  0.0  14836  5760 ?        Ss   июн24   5:44 /lib/systemd/systemd-oomd
+systemd+     724  0.0  0.0  26464  9972 ?        Ss   июн24   0:26 /lib/systemd/systemd-resolved
+root         726  0.0  0.0      0     0 ?        I<   июн24   0:00 [amd_iommu_v2]
+systemd+     727  0.0  0.0  89388  6264 ?        Ssl  июн24   0:00 /lib/systemd/systemd-timesyncd
+root         851  0.0  0.0 240276  7584 ?        Ssl  июн24   0:04 /usr/libexec/accounts-daemon
+root         852  0.0  0.0      0     0 ?        I<   июн24   0:00 [amdgpu-reset-de]
+root         853  0.0  0.0      0     0 ?        I<   июн24   0:00 [ttm]
+root         854  0.0  0.0   2816  2032 ?        Ss   июн24   0:09 /usr/sbin/acpid
+avahi        857  0.0  0.0   7992  4088 ?        Ss   июн24   0:13 avahi-daemon: running [wacer.local]
+root         859  0.0  0.0  10880  4828 ?        Ss   июн24   0:00 /usr/lib/bluetooth/bluetoothd
+root         861  0.0  0.0   9504  3000 ?        Ss   июн24   0:00 /usr/sbin/cron -f -P
+message+     862  0.0  0.0  11472  6728 ?        Ss   июн24   0:29 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         863  0.0  0.1 614564 17164 ?        Ssl  июн24   1:04 /usr/sbin/NetworkManager --no-daemon
+root         869  0.0  0.0  82840  3904 ?        Ssl  июн24   0:35 /usr/sbin/irqbalance --foreground
+root         872  0.0  0.0  41072 11240 ?        Ss   июн24   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         877  0.0  0.0 243100 10760 ?        Ssl  июн24   0:04 /usr/libexec/polkitd --no-debug
+root         879  0.0  0.0 240076  7208 ?        Ssl  июн24   0:00 /usr/libexec/power-profiles-daemon
+syslog       882  0.0  0.0 222404  4800 ?        Ssl  июн24   0:02 /usr/sbin/rsyslogd -n -iNONE
+root         890  0.0  0.2 1838264 30144 ?       Ssl  июн24   1:06 /usr/lib/snapd/snapd
+root         893  0.0  0.0 236484  6420 ?        Ssl  июн24   0:00 /usr/libexec/switcheroo-control
+root         894  0.0  0.0  48292  6708 ?        Ss   июн24   0:02 /lib/systemd/systemd-logind
+root         896  0.0  0.0 394092 11200 ?        Ssl  июн24   0:31 /usr/libexec/udisks2/udisksd
+root         898  0.0  0.0  17808  8768 ?        Ss   июн24   0:02 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        923  0.0  0.0   7444  1172 ?        S    июн24   0:00 avahi-daemon: chroot helper
+root         928  0.0  0.0 318064  7920 ?        Ssl  июн24   0:00 /usr/sbin/ModemManager
+root         929  0.0  0.0      0     0 ?        I<   июн24   0:00 [amdgpu_dm_hpd_r]
+root         930  0.0  0.0      0     0 ?        I<   июн24   0:00 [amdgpu_dm_hpd_r]
+root         931  0.0  0.0      0     0 ?        I<   июн24   0:00 [dm_vblank_contr]
+root         981  0.1  0.1 1729024 21704 ?       Ssl  июн24  11:01 /usr/bin/containerd
+root         982  0.0  0.0  15436  5188 ?        Ss   июн24   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         984  0.0  0.0      0     0 ?        S    июн24   0:00 [card0-crtc0]
+root         985  0.0  0.0      0     0 ?        S    июн24   0:00 [card0-crtc1]
+root         986  0.0  0.0      0     0 ?        S    июн24   0:00 [card0-crtc2]
+root         987  0.0  0.0      0     0 ?        S    июн24   0:00 [card0-crtc3]
+root         988  0.1  0.0      0     0 ?        S    июн24   6:36 [gfx_low]
+root         989  0.0  0.0      0     0 ?        S    июн24   4:27 [gfx_high]
+root         990  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.0.0]
+root         991  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.1.0]
+root         992  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.2.0]
+root         993  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.3.0]
+root         994  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.0.1]
+root         995  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.1.1]
+root         996  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.2.1]
+root         997  0.0  0.0      0     0 ?        S    июн24   0:00 [comp_1.3.1]
+root         999  0.0  0.0      0     0 ?        S    июн24   0:30 [sdma0]
+root        1000  0.0  0.0      0     0 ?        S    июн24   0:00 [vcn_dec]
+root        1001  0.0  0.0      0     0 ?        S    июн24   0:00 [vcn_enc0]
+root        1002  0.0  0.0      0     0 ?        S    июн24   0:00 [vcn_enc1]
+root        1003  0.0  0.0      0     0 ?        S    июн24   0:00 [jpeg_dec]
+colord      1004  0.0  0.0 245508 11416 ?        Ssl  июн24   0:00 /usr/libexec/colord
+root        1005  0.0  0.0 241228  7980 ?        Ssl  июн24   0:00 /usr/sbin/gdm3
+root        1184  0.0  0.0 118172 13416 ?        Ssl  июн24   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1203  0.0  0.0 317920  9744 ?        Sl   июн24   0:00 gdm-session-worker [pam/gdm-autologin]
+irina       1244  0.0  0.0  18684 10292 ?        Ss   июн24   3:30 /lib/systemd/systemd --user
+irina       1245  0.0  0.0 170320  2768 ?        S    июн24   0:00 (sd-pam)
+irina       1307  0.0  0.0  39864  4072 ?        S<sl июн24   0:00 /usr/bin/pipewire
+irina       1308  0.0  0.0  23632  3624 ?        Ssl  июн24   0:00 /usr/bin/pipewire-media-session
+irina       1310  0.4  0.1 2286152 21848 ?       S<sl июн24  27:33 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+irina       1312  0.0  0.0  38952  1960 ?        Ss   июн24   0:00 /snap/snapd-desktop-integration/157/usr/bin/snapd-desktop-integration
+rtkit       1323  0.0  0.0 154004  3276 ?        SNsl июн24   0:02 /usr/libexec/rtkit-daemon
+irina       1324  0.0  0.0 388500  7916 ?        SLl  июн24   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+irina       1343  0.0  0.0 162400  5836 tty2     Ssl+ июн24   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+irina       1346  0.0  0.0  11200  6732 ?        Ss   июн24   0:36 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+irina       1360  0.0  0.0 223052 12348 tty2     Sl+  июн24   0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+irina       1482  0.0  0.0  91920  5232 ?        Ssl  июн24   0:00 /usr/libexec/gnome-session-ctl --monitor
+irina       1493  0.0  0.0 240764  7568 ?        Ssl  июн24   0:00 /usr/libexec/gvfsd
+irina       1501  0.0  0.0 380896  6296 ?        Sl   июн24   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+irina       1503  0.0  0.0 519476 14172 ?        Ssl  июн24   0:01 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+irina       1559  0.0  0.0 309656  7936 ?        Sl   июн24   0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+irina       1566  0.0  0.0   8696  4372 ?        S    июн24   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+irina       1569  4.1  3.4 6987432 484392 ?      Ssl  июн24 268:59 /usr/bin/gnome-shell
+root        1667  0.0  0.0      0     0 ?        S<   июн24   0:00 [krfcommd]
+irina       1767  0.0  0.0 610648  6988 ?        Ssl  июн24   0:00 /usr/libexec/xdg-document-portal
+irina       1782  0.0  0.0 236164  6088 ?        Ssl  июн24   0:00 /usr/libexec/xdg-permission-store
+root        1789  0.0  0.0   2796  1956 ?        Ss   июн24   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+irina       1956  0.0  0.0 583796 13588 ?        Sl   июн24   0:00 /usr/libexec/gnome-shell-calendar-server
+irina       1976  0.0  0.1 1072260 16004 ?       Ssl  июн24   0:00 /usr/libexec/evolution-source-registry
+root        1988  0.0  0.0 242604  8612 ?        Ssl  июн24   0:06 /usr/libexec/upowerd
+irina       2003  0.0  0.0 157440  6228 ?        Ssl  июн24   0:00 /usr/libexec/dconf-service
+irina       2012  0.0  0.1 581984 17608 ?        Sl   июн24   0:00 /usr/libexec/goa-daemon
+irina       2013  0.2  0.0 316348 10660 ?        Ssl  июн24  15:19 /usr/libexec/gvfs-udisks2-volume-monitor
+irina       2045  0.0  0.1 1455416 20224 ?       Ssl  июн24   0:01 /usr/libexec/evolution-calendar-factory
+irina       2070  0.0  0.0 338412 11736 ?        Sl   июн24   0:03 /usr/libexec/goa-identity-service
+irina       2089  0.0  0.0 315220  7604 ?        Ssl  июн24   0:08 /usr/libexec/gvfs-afc-volume-monitor
+irina       2096  0.0  0.0 236644  6416 ?        Ssl  июн24   0:00 /usr/libexec/gvfs-goa-volume-monitor
+irina       2117  0.0  0.0 237560  6620 ?        Ssl  июн24   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+irina       2126  0.0  0.1 680632 15472 ?        Ssl  июн24   0:00 /usr/libexec/evolution-addressbook-factory
+irina       2129  0.0  0.0 236596  6532 ?        Ssl  июн24   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+root        2199  0.0  0.1 372372 15184 ?        Ssl  июн24   0:02 /usr/libexec/packagekitd
+irina       2363  0.0  0.0 393344 13336 ?        Sl   июн24   0:49 /usr/libexec/gvfsd-trash --spawner :1.13 /org/gtk/gvfs/exec_spaw/0
+irina       2381  0.0  0.0 429264  3412 ?        Sl   июн24   0:00 /snap/snapd-desktop-integration/157/usr/bin/snapd-desktop-integration
+irina       2440  0.0  0.1 2931516 21172 ?       Sl   июн24   0:02 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+irina       2442  0.0  0.0 162688  7176 ?        Sl   июн24   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+root        2458  0.0  0.2 2869248 36456 ?       Ssl  июн24   2:59 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        2460  0.0  0.0  70856  9632 ?        Ss   июн24   0:57 /usr/sbin/nmbd --foreground --no-process-group
+irina       2462  0.0  0.0   2892  1656 ?        Ss   июн24   0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE" = "x11" ] && echo "--xim")
+irina       2471  0.0  0.0 388860  8636 ?        Sl   июн24   0:23 /usr/bin/ibus-daemon --panel disable
+irina       2479  0.0  0.0 310468  6888 ?        Ssl  июн24   0:00 /usr/libexec/gsd-a11y-settings
+irina       2484  0.0  0.1 536432 20356 ?        Ssl  июн24   0:01 /usr/libexec/gsd-color
+irina       2487  0.0  0.0 375508 13016 ?        Ssl  июн24   0:00 /usr/libexec/gsd-datetime
+kernoops    2489  0.0  0.0  13092  1996 ?        Ss   июн24   0:00 /usr/sbin/kerneloops --test
+irina       2490  0.0  0.0 313372  9268 ?        Ssl  июн24   1:38 /usr/libexec/gsd-housekeeping
+irina       2492  0.0  0.1 340600 16424 ?        Ssl  июн24   0:00 /usr/libexec/gsd-keyboard
+irina       2493  0.0  0.1 864208 19768 ?        Ssl  июн24   0:01 /usr/libexec/gsd-media-keys
+irina       2497  0.0  0.1 715608 21840 ?        Ssl  июн24   0:02 /usr/libexec/gsd-power
+irina       2500  0.0  0.0 249888 10400 ?        Ssl  июн24   0:00 /usr/libexec/gsd-print-notifications
+irina       2505  0.0  0.0 457868  6476 ?        Ssl  июн24   0:00 /usr/libexec/gsd-rfkill
+irina       2509  0.0  0.0 236300  6344 ?        Ssl  июн24   0:01 /usr/libexec/gsd-screensaver-proxy
+irina       2515  0.0  0.0 466112 10196 ?        Ssl  июн24   0:13 /usr/libexec/gsd-sharing
+irina       2516  0.0  0.0 386080  7472 ?        Ssl  июн24   0:00 /usr/libexec/gsd-smartcard
+kernoops    2527  0.0  0.0  13092  2028 ?        Ss   июн24   0:00 /usr/sbin/kerneloops
+irina       2531  0.0  0.0 319384  8680 ?        Ssl  июн24   0:00 /usr/libexec/gsd-sound
+irina       2534  0.0  0.1 414932 16792 ?        Ssl  июн24   0:00 /usr/libexec/gsd-wacom
+irina       2584  0.0  0.0 163492  6828 ?        Sl   июн24   0:00 /usr/libexec/ibus-memconf
+irina       2587  0.0  0.1 347840 17440 ?        Sl   июн24   0:09 /usr/libexec/ibus-extension-gtk3
+irina       2589  0.0  0.3 1184180 47760 ?       Sl   июн24   0:03 /usr/libexec/evolution-data-server/evolution-alarm-notify
+irina       2608  0.0  0.0 237272  7200 ?        Sl   июн24   0:00 /usr/libexec/ibus-portal
+irina       2628  0.0  0.1 2031832 19676 ?       Sl   июн24   0:20 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+root        2648  0.0  0.0  86784 11452 ?        Ss   июн24   0:01 /usr/sbin/smbd --foreground --no-process-group
+irina       2649  0.0  0.0 232272  7768 ?        Sl   июн24   0:00 /usr/libexec/gsd-disk-utility-notify
+root        2716  0.0  0.0  84620  5612 ?        S    июн24   0:00 /usr/sbin/smbd --foreground --no-process-group
+root        2718  0.0  0.0  84628  4632 ?        S    июн24   0:00 /usr/sbin/smbd --foreground --no-process-group
+root        2730  0.0  0.0  86544 10776 ?        S    июн24   0:02 /usr/lib/x86_64-linux-gnu/samba/samba-bgqd --ready-signal-fd=45 --parent-watch-fd=11 --debuglevel=0 -F
+irina       2776  0.0  0.0 342368 12724 ?        Sl   июн24   0:00 /usr/libexec/gsd-printer
+irina       2780  0.0  0.0 164652  7916 ?        Sl   июн24   0:09 /usr/libexec/ibus-engine-simple
+irina       3481  0.8  0.3 1167896 46772 ?       Sl   июн24  55:25 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.7BVOP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+irina       3700  0.0  0.0 886008 11620 ?        Ssl  июн24   0:24 /usr/libexec/xdg-desktop-portal
+irina       3746  0.0  0.1 802848 28368 ?        SNsl июн24   1:23 /usr/libexec/tracker-miner-fs-3
+irina       3756  0.0  0.4 1778404 58624 ?       Ssl  июн24   3:21 /usr/libexec/xdg-desktop-portal-gnome
+irina       3912  0.0  0.1 2873988 18356 ?       Sl   июн24   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+root        4093  0.0  0.0 1303292 1872 ?        Sl   июн24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8080 -container-ip 172.18.0.2 -container-port 8080
+root        4101  0.0  0.0 1229816 1188 ?        Sl   июн24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8080 -container-ip 172.18.0.2 -container-port 8080
+irina       4153  0.0  0.1 832472 26612 ?        Ssl  июн24   0:06 /usr/libexec/gsd-xsettings
+root        4210  0.0  0.0 722536  6864 ?        Sl   июн24   1:07 /usr/bin/containerd-shim-runc-v2 -namespace moby -id c019b20f25ab1bfd9d94517a622914f8d335037e2ec7c8ce47fa0f093ebe2e43 -address /run/containerd/containerd.sock
+root        4224  0.0  0.0 722280  5284 ?        Sl   июн24   0:18 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 2f05fe282b09b19a56eadbce57090415929c272bf9b168e8d96be412171069bf -address /run/containerd/containerd.sock
+root        4225  0.0  0.0 722280  5556 ?        Sl   июн24   0:17 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 4de217d3238d4e4e1759513186fbb40e90c28b9feed537ecb57e1430db811285 -address /run/containerd/containerd.sock
+irina       4327  0.0  0.1 344152 17876 ?        Ssl  июн24   0:03 /usr/libexec/xdg-desktop-portal-gtk
+999         4340  0.0  0.0 1885484 1108 ?        Ssl  июн24   3:07 mysqld
+999         4342  0.1  0.0  53612   804 ?        Ssl  июн24   7:21 redis-server *:6379
+root        4356  0.0  0.0 710796  5656 ?        Ssl  июн24   0:18 /selenoid-ui --selenoid-uri=http://selenoid:4444
+root        4357  0.0  0.0 1303292 1400 ?        Sl   июн24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 4444 -container-ip 172.18.0.3 -container-port 4444
+root        4442  0.0  0.0 722536  5340 ?        Sl   июн24   0:18 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 1e01b84b6eb36946ec560ed77620753ed39c47e90baf409ef3ac79c8dc866908 -address /run/containerd/containerd.sock
+irina       4446  0.0  0.1 194208 16492 ?        Sl   июн24   0:04 /usr/libexec/ibus-x11
+root        4522  0.0  0.0 710424   212 ?        Ssl  июн24   0:00 /usr/bin/selenoid -listen :4444 -conf /etc/selenoid/browsers.json -video-output-dir /opt/selenoid/video/ -timeout 5m -session-delete-timeout 60s -session-attempt-timeout 60s -service-startup-timeout 60s -mem 768m -cpu 4 -capture-driver-logs -conf /etc/selenoid/browsers.json -video-output-dir /opt/selenoid/video/ -video-recorder-image selenoid/video-recorder:latest-release -log-output-dir /opt/selenoid/logs/ -container-network selenoid
+root        5154  0.0  0.0  41232  4352 ?        Ss   июн24   0:01 /usr/lib/postfix/sbin/master -w
+irina       5345  0.0  0.8 531040 126660 ?       Sl   июн24   0:42 /usr/bin/python3 /usr/lib/python3/dist-packages/rabbitvcs/services/checkerservice.py
+irina       5556  0.0  0.0 163828  6936 ?        Ssl  июн24   0:00 /usr/libexec/gvfsd-metadata
+root        5586  0.0  0.0      0     0 ?        I<   июн24   0:00 [dio/nvme0n1p2]
+root        7111  0.0  0.0      0     0 ?        I<   июн24   0:00 [iprt-VBoxWQueue]
+root        7112  0.0  0.0      0     0 ?        S    июн24   0:00 [iprt-VBoxTscThread]
+root        7198  0.0  0.0      0     0 ?        I<   июн24   0:00 [cifsiod]
+root        7199  0.0  0.0      0     0 ?        I<   июн24   0:00 [smb3decryptd]
+root        7200  0.0  0.0      0     0 ?        I<   июн24   0:00 [cifsfileinfoput]
+root        7201  0.0  0.0      0     0 ?        I<   июн24   0:00 [cifsoplockd]
+root        7202  0.0  0.0      0     0 ?        I<   июн24   0:00 [deferredclose]
+root        7203  0.0  0.0      0     0 ?        I<   июн24   0:00 [cifs-dfscache]
+irina       7258  0.0  0.1 494272 24800 ?        Sl   июн24   0:05 update-notifier
+irina      15575  1.4  2.4 34286296 352660 ?     SLl  июн24  91:33 /opt/google/chrome/chrome
+irina      15580  0.0  0.0   8520  1944 ?        S    июн24   0:00 cat
+irina      15581  0.0  0.0   8520  1960 ?        S    июн24   0:00 cat
+irina      15583  0.0  0.0 33576904 2644 ?       Sl   июн24   0:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/irina/.config/google-chrome/Crash Reports --metrics-dir=/home/irina/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 22.04.4 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=125.0.6422.141 --initial-client-fd=5 --shared-client-connection
+irina      15585  0.0  0.0 33567668 2068 ?       Sl   июн24   0:00 /opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/irina/.config/google-chrome/Crash Reports --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 22.04.4 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=125.0.6422.141 --initial-client-fd=4 --shared-client-connection
+irina      15591  0.0  0.1 33922788 25032 ?      S    июн24   0:00 /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable
+irina      15592  0.0  0.2 33922780 29264 ?      S    июн24   0:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable
+irina      15594  0.0  0.0 33922804 8492 ?       S    июн24   0:13 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable
+irina      15619  1.3  1.1 34358152 163104 ?     Sl   июн24  88:48 /opt/google/chrome/chrome --type=gpu-process --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      15620  0.3  0.8 33956476 114008 ?     Sl   июн24  22:29 /opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      15665  0.0  0.3 33981920 49940 ?      Sl   июн24   0:58 /opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      15751  0.0  0.8 1186647144 119168 ?   Sl   июн24   0:20 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --extension-process --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=2021128763 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      15761  0.0  0.5 1186581628 84484 ?    Sl   июн24   0:05 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --extension-process --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=2021183916 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      15783  0.2  0.3 34201228 53576 ?      Sl   июн24  16:36 /opt/google/chrome/chrome --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina      16187  0.0  0.0 1682196 10920 ?       Sl   июн24   0:08 /usr/bin/snap userd
+root       16615  0.0  0.0 1303292 1396 ?        Sl   июн24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8090 -container-ip 172.16.62.2 -container-port 80
+root       16621  0.0  0.0 1303548 1232 ?        Sl   июн24   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8090 -container-ip 172.16.62.2 -container-port 80
+root       16640  0.0  0.0 722536  5464 ?        Sl   июн24   0:20 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 536f415b92d60a076adf47e916167408ba7067c6cf9b95b742e89c1d3a3e3c95 -address /run/containerd/containerd.sock
+root       16663  0.0  0.0  18784    92 ?        Ss   июн24   0:00 /bin/sh /usr/sbin/apache2ctl -D FOREGROUND
+root       17045  0.0  0.0      0     0 ?        D    июн24   0:02 [cifsd]
+root       17122  0.0  0.0 481320   168 ?        S    июн24   0:10 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+499        17148  0.0  0.0 481320   204 ?        S    июн24   0:00 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+499        17149  0.0  0.0 481320   264 ?        S    июн24   0:00 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+499        17150  0.0  0.0 481320   264 ?        S    июн24   0:00 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+499        17151  0.0  0.0 481320   264 ?        S    июн24   0:00 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+499        17152  0.0  0.0 481320   264 ?        S    июн24   0:00 /usr/sbin/httpd-prefork -DSYSCONFIG -C PidFile /run/httpd.pid -C Include /etc/apache2/sysconfig.d//loadmodule.conf -C Include /etc/apache2/sysconfig.d//global.conf -f /etc/apache2/httpd.conf -c Include /etc/apache2/sysconfig.d//include.conf -D FOREGROUND
+irina      18870  0.0  0.0 462636  8288 ?        Sl   июн24   0:00 /usr/libexec/gvfsd-network --spawner :1.13 /org/gtk/gvfs/exec_spaw/1
+irina      18889  0.0  0.0 316964  8304 ?        Sl   июн24   0:00 /usr/libexec/gvfsd-dnssd --spawner :1.13 /org/gtk/gvfs/exec_spaw/3
+irina      20146  0.0  0.0 281848 10380 ?        Sl   июн24   0:00 /usr/libexec/gvfsd-http --spawner :1.13 /org/gtk/gvfs/exec_spaw/4
+irina      24462  0.0  0.5 601084 74088 ?        Rsl  июн24   1:53 /usr/libexec/gnome-terminal-server
+irina      24505  0.0  0.0   8088  5140 ?        S    июн24   0:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+root       24597  0.0  0.0  19700   564 ?        Ss+  июн24   0:00 /bin/bash
+irina      27154  0.4  0.5 948780 71880 ?        Sl   июн24  30:36 /usr/bin/gnome-todo --gapplication-service
+irina      79963  0.0  0.2 895664 35420 ?        Sl   июн25   0:01 /usr/bin/gnome-calendar --gapplication-service
+irina      79965  0.0  0.2 393376 31220 ?        SLl  июн25   0:00 /usr/bin/seahorse --gapplication-service
+irina      80065  0.1  3.8 3379416 542344 ?      Sl   июн25   8:29 /home/irina/build/Telegram/Telegram
+irina      81597  0.0  0.0  11552  4428 pts/3    Ss+  июн25   0:00 bash
+irina     408720  0.0  1.0 1520504 154444 ?      Sl   июн27   0:25 /usr/bin/nautilus --gapplication-service
+root      432719  0.0  0.0      0     0 ?        I    июн27   0:23 [kworker/0:2-events]
+root      432886  0.0  0.0   2892   852 ?        Ss   июн27   0:00 /bin/sh /snap/cups/1058/scripts/run-cupsd
+root      432893  0.0  0.0   2892   880 ?        Ss   июн27   0:00 /bin/sh /snap/cups/1058/scripts/run-cups-browsed
+root      433037  0.0  0.0  69852  4168 ?        S    июн27   0:00 cupsd -f -s /var/snap/cups/common/etc/cups/cups-files.conf -c /var/snap/cups/common/etc/cups/cupsd.conf
+root      433038  0.0  0.0 241612  3344 ?        Sl   июн27   0:00 cups-proxyd /var/snap/cups/common/run/cups.sock /run/cups/cups.sock -l --logdir /var/snap/cups/1058/var/log
+root      433072  0.0  0.0   2892   520 ?        S    июн27   0:00 /bin/sh /snap/cups/1058/scripts/run-cups-browsed
+irina     508418  0.0  0.0  11420  5196 pts/4    Ss+  июн27   0:00 bash
+irina     508585  0.0  0.0  11552  5728 pts/5    Ss   июн27   0:00 bash
+root      511482  0.0  0.0      0     0 ?        I    июн27   0:10 [kworker/7:1-events]
+root      511679  0.0  0.0      0     0 ?        I    09:00   0:08 [kworker/1:3-events]
+root      511682  0.0  0.0      0     0 ?        I    09:00   0:15 [kworker/4:1-events]
+root      511886  0.0  0.1  74348 14464 ?        Ss   09:00   0:00 /usr/sbin/cupsd -l
+root      511899  0.0  0.0 172688 11136 ?        Ssl  09:00   0:00 /usr/sbin/cups-browsed
+irina     512215  0.0  0.5 3294200 74664 ?       Sl   09:00   0:09 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1536:864:1.25:27:0:0:0:0
+postfix   513501  0.0  0.0  41616  7040 ?        S    09:03   0:00 qmgr -l -t unix -u
+irina     547231  0.0  1.1 1188292180 162988 ?   Sl   16:03   0:07 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2896 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=213946360703 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+root      548467  0.0  0.0      0     0 ?        I    16:18   0:04 [kworker/2:1-events]
+root      552219  0.0  0.0      0     0 ?        I<   17:01   0:00 [kworker/2:2H-ttm]
+root      553102  0.0  0.0      0     0 ?        I<   17:04   0:00 [kworker/3:1H-ttm]
+root      555642  0.0  0.0      0     0 ?        I<   17:11   0:00 [kworker/7:15H-kblockd]
+root      561547  0.0  0.0      0     0 ?        I<   17:29   0:00 [kworker/5:0H-ttm]
+irina     565426  3.0 13.0 9836820 1862188 ?     Sl   17:41   6:35 /snap/pycharm-community/388/jbr/bin/java -classpath /snap/pycharm-community/388/lib/platform-loader.jar:/snap/pycharm-community/388/lib/util-8.jar:/snap/pycharm-community/388/lib/util.jar:/snap/pycharm-community/388/lib/app-client.jar:/snap/pycharm-community/388/lib/util_rt.jar:/snap/pycharm-community/388/lib/opentelemetry.jar:/snap/pycharm-community/388/lib/app.jar:/snap/pycharm-community/388/lib/modules.jar:/snap/pycharm-community/388/lib/lib-client.jar:/snap/pycharm-community/388/lib/stats.jar:/snap/pycharm-community/388/lib/jps-model.jar:/snap/pycharm-community/388/lib/external-system-rt.jar:/snap/pycharm-community/388/lib/rd.jar:/snap/pycharm-community/388/lib/bouncy-castle.jar:/snap/pycharm-community/388/lib/protobuf.jar:/snap/pycharm-community/388/lib/intellij-test-discovery.jar:/snap/pycharm-community/388/lib/intellij-coverage-agent-1.0.744.jar:/snap/pycharm-community/388/lib/forms_rt.jar:/snap/pycharm-community/388/lib/lib.jar:/snap/pycharm-community/388/lib/externalProcess-rt.jar:/snap/pycharm-community/388/lib/groovy.jar:/snap/pycharm-community/388/lib/annotations.jar:/snap/pycharm-community/388/lib/grpc.jar:/snap/pycharm-community/388/lib/jsch-agent.jar:/snap/pycharm-community/388/lib/junit4.jar:/snap/pycharm-community/388/lib/trove.jar -XX:ErrorFile=/home/irina/java_error_in_pycharm_%p.log -XX:HeapDumpPath=/home/irina/java_error_in_pycharm_.hprof -Xms256m -Xmx1500m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:CICompilerCount=2 -XX:ReservedCodeCacheSize=512m -XX:CompileCommand=exclude,com/intellij/openapi/vfs/impl/FilePartNodeRoot,trieDescend -XX:SoftRefLRUPolicyMSPerMB=50 -Dide.show.tips.on.startup.default.value=false -Dsun.tools.attach.tmp.only=true -Dawt.lock.fair=true -Xmx1739m -Djb.vmOptionsFile=/home/irina/.config/JetBrains/PyCharmCE2024.1/pycharm64.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=PyCharmCE2024.1 -Djna.boot.library.path=/snap/pycharm-community/388/lib/jna/amd64 -Dpty4j.preferred.native.folder=/snap/pycharm-community/388/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=/snap/pycharm-community/388/modules/module-descriptors.jar -Didea.platform.prefix=PyCharmCore -Dsplash=true -Daether.connector.resumeDownloads=false --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED com.intellij.idea.Main
+irina     565583  0.0  0.0   3740  1536 ?        S    17:41   0:01 /snap/pycharm-community/388/bin/fsnotifier
+root      565986  0.0  0.0      0     0 ?        I<   17:41   0:00 [kworker/u33:2-rb_allocator]
+root      576198  0.0  0.0      0     0 ?        I    18:14   0:01 [kworker/3:1-mm_percpu_wq]
+root      616902  0.0  0.0   3212  1664 ?        S    20:23   0:00 sleep 3600
+root      618454  0.0  0.0      0     0 ?        I    20:29   0:02 [kworker/u32:2-flush-259:0]
+root      619304  0.0  0.0      0     0 ?        I<   20:31   0:00 [kworker/2:1H-kblockd]
+root      619354  0.0  0.0      0     0 ?        I<   20:31   0:00 [kworker/0:0H-ttm]
+root      619355  0.0  0.0      0     0 ?        I<   20:31   0:00 [kworker/0:2H-kblockd]
+root      619602  0.0  0.0      0     0 ?        I    20:32   0:00 [kworker/3:2-events]
+root      619603  0.0  0.0      0     0 ?        I    20:32   0:00 [kworker/5:2-events]
+root      619604  0.0  0.0      0     0 ?        I    20:32   0:00 [kworker/6:1-events]
+root      619605  0.0  0.0      0     0 ?        I    20:32   0:00 [kworker/6:3-events]
+root      619612  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/4:3H-ttm]
+root      619616  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/4:4H-kblockd]
+root      619618  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/5:4H-kblockd]
+root      619815  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/6:3H-kblockd]
+root      619817  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/3:3H-kblockd]
+root      619830  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/6:5H-ttm]
+root      619831  0.0  0.0      0     0 ?        I<   20:32   0:00 [kworker/7:1H-ttm]
+root      619836  0.0  0.0      0     0 ?        I    20:32   0:00 [kworker/7:0-events]
+root      620050  0.0  0.0      0     0 ?        I<   20:34   0:00 [kworker/1:0H-ttm]
+root      620051  0.0  0.0      0     0 ?        I<   20:34   0:00 [kworker/1:1H-ttm]
+root      620443  0.0  0.0      0     0 ?        I    20:41   0:01 [kworker/u32:0-flush-259:0]
+postfix   620528  0.0  0.0  41572  7040 ?        S    20:43   0:00 pickup -l -t unix -u -c
+root      620812  0.0  0.0      0     0 ?        I<   20:49   0:00 [kworker/u33:1-rb_allocator]
+root      620948  0.0  0.0      0     0 ?        I    20:49   0:00 [kworker/5:0]
+root      621005  0.0  0.0      0     0 ?        I    20:49   0:00 [kworker/4:3]
+root      621092  0.0  0.0      0     0 ?        I    20:49   0:00 [kworker/0:0-events]
+root      621489  0.0  0.0      0     0 ?        I    20:56   0:00 [kworker/u32:1-events_unbound]
+irina     621891  1.3  1.4 1186661272 206364 ?   Sl   21:04   0:12 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=3056 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=231973858793 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina     621969  3.8  1.8 1196926784 260200 ?   Sl   21:05   0:34 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=3062 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=232012044530 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+root      622105  0.0  0.0      0     0 ?        I    21:05   0:00 [kworker/2:2]
+irina     622112  0.3  0.9 1189953640 137712 ?   Sl   21:05   0:02 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=3071 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=232019296258 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+irina     622195  0.9  1.1 1186637388 162408 ?   Sl   21:05   0:08 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=3075 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=232031497152 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+root      622417  0.0  0.0      0     0 ?        I    21:09   0:00 [kworker/1:0]
+root      622736  0.1  0.0      0     0 ?        I    21:15   0:00 [kworker/u32:3-events_unbound]
+irina     622768  0.0  0.4 1186576916 59304 ?    Sl   21:15   0:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=15583 --enable-crash-reporter=f40e0013-b885-47c9-9654-ba0aee6719ef, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=3080 --time-ticks-at-unix-epoch=-1719207021000144 --launch-time-ticks=232631496694 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16932222698715682194,4464553923724796367,262144 --variations-seed-version=20240621-050116.014000
+root      622812  0.0  0.0      0     0 ?        I<   21:16   0:00 [kworker/3:0H]
+root      622813  0.0  0.0      0     0 ?        I<   21:16   0:00 [kworker/1:2H-kblockd]
+root      622856  0.0  0.0      0     0 ?        I<   21:16   0:00 [kworker/u33:0-rb_allocator]
+root      623004  0.0  0.0      0     0 ?        I    21:19   0:00 [kworker/u32:4]
+root      623005  0.0  0.0      0     0 ?        I    21:19   0:00 [kworker/u32:5]
+irina     623025  0.0  0.0  13128  3840 pts/5    R+   21:19   0:00 ps aux
