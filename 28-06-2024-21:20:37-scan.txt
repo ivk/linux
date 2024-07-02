@@ -1,0 +1,22 @@
+System : ('Linux', 'Ubuntu 22.04.4 LTS')
+Пользователи системы : root, daemon, bin, sys, sync, games, man, lp, mail, news, uucp, proxy, www-data, backup, list, irc, gnats, nobody, systemd-network, systemd-resolve, messagebus, systemd-timesync, syslog, _apt, tss, uuidd, systemd-oom, tcpdump, avahi-autoipd, usbmux, dnsmasq, kernoops, avahi, cups-pk-helper, rtkit, whoopsie, sssd, speech-dispatcher, nm-openvpn, saned, colord, geoclue, pulse, gnome-initial-setup, hplip, gdm, irina, sshd, postfix, fwupd-refresh, snapd-range-524288-root, snap_daemon
+Процессов запущено :  363
+Пользовательских процессов : 
+	root : 229
+	irina : 112
+	499 : 5
+	avahi : 2
+	kernoops : 2
+	999 : 2
+	postfix : 2
+	systemd-oom : 1
+	systemd-resolve : 1
+	systemd-timesync : 1
+	messagebus : 1
+	syslog : 1
+	colord : 1
+	rtkit : 1
+Всего памяти используется: 42.59999999999999%
+Всего CPU используется: 19.8%
+Больше всего памяти использует: /snap/pycharm-commun... - 13.1%
+Больше всего CPU использует: /usr/bin/gnome-shell - 3.1%
