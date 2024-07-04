@@ -10,7 +10,7 @@ class PsLineInvalid(Exception):
         self.line = line
 
     def __str__(self):
-        return "Строчка процесса нераспознана: " + self.line
+        return "Строчка процесса не распознана: " + self.line
 
 
 def get_sys_info():
@@ -108,9 +108,7 @@ if __name__ == '__main__':
     now = datetime.today()
     filename = now.strftime('%d-%m-%Y-%H:%M:%S') + "-scan.txt"
     with open(filename, "w") as fp:
-        for line in data:
-            print(line)
-            fp.write(line)
-            fp.write('\n')
+        fp.writelines(([string + '\n' for string in data]))
+
 
 
