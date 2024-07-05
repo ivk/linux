@@ -2,25 +2,13 @@ import re
 from collections import namedtuple
 from datetime import datetime
 import sqlite3
+import json
 
 FIELD_NAMES = ["ip", "date", "method", "url", "status", "bytes", "duration"]
-
-
-# import sqlalchemy
-
-
-class PsLineInvalid(Exception):
-    def __init__(self, line):
-        self.line = line
-
-    def __str__(self):
-        return "Строчка процесса не распознана: " + self.line
-
+log_string = namedtuple("log_string", FIELD_NAMES)
 
 # "ip", "something", "username", "date", "request", "status", "bytes", "referer", "ua", "duration"
 reg = r"([\d\.]+)\s(.+)\s(.+)\s+\[(.+)\]\s\"(.*?)\"\s(\d+)\s(\d+|-)\s\"(.*?)\"\s\"(.*?)\"\s(\d+)"
-log_string = namedtuple("log_string",
-                        FIELD_NAMES)
 
 CREATE_TABLE = '''
         CREATE TABLE IF NOT EXISTS accessShort (
@@ -34,12 +22,50 @@ CREATE_TABLE = '''
         duration INTEGER
     )
 '''
+CREATE_INDEX = (
+    "CREATE INDEX 'ip' ON 'accessShort' ('ip');",
+    "CREATE INDEX 'method' ON 'accessShort' ('method');",
+    "CREATE INDEX 'status' ON 'accessShort' ('status');",
+    "CREATE INDEX 'url' ON 'accessShort' ('url');"
+)
 DROP_TABLE = '''
     drop table if exists accessShort
 '''
+COUNT_ALL = '''
+    SELECT count(*) from accessShort 
+'''
+METHODS_COUNT = '''
+    SELECT DISTINCT(method), count(*) 
+        from accessShort 
+    group by method order by 2 desc
+'''
+TOP3_IP = '''
+    SELECT distinct(ip), count(*) 
+        from accessShort 
+    group by ip order by 2 desc 
+    limit 3
+'''
+TOP3_DURATION = '''
+    SELECT method, url, ip, duration, date 
+        from accessShort 
+    order by duration desc limit 3
+'''
+
+
+class PsLineInvalid(Exception):
+    def __init__(self, line):
+        self.line = line
+
+    def __str__(self):
+        return "Couldn't recognize this log line: " + self.line
 
 
 def log_parser(line):
+    """
+    parse a line from access log file to database-compatible list
+    :param line:
+    :return:
+    """
     ret = {}
     match = re.match(reg, line)
     if not match:
@@ -53,63 +79,41 @@ def log_parser(line):
         request[0],
         request[1],
         int(columns[5]),
-        int(columns[6]),
+        int(columns[6]) if columns[6] != '-' else 0,
         int(columns[9])
     )
 
     return ret
 
 
-def log_reader(filename):
-    parsed_log = []
-    with open(filename, "r") as fp:
-        for line in fp:
-            try:
-                parsed_log.append(log_parser(line.rstrip()))
-            except PsLineInvalid as ex:
-                print(ex)
-
-    return parsed_log
-
-
-# def db_use(lines):
-#     connection_string = 'sqlite://'
-#     db = sqlalchemy.create_engine(connection_string)
-#     engine = db.connect()
-#     meta = sqlalchemy.MetaData(engine)
-#
-#     columns = (
-#         sqlalchemy.Column('id', sqlalchemy.Integer, autoincrement="auto", primary_key=True),
-#         sqlalchemy.Column('ip', sqlalchemy.Text, nullable=False),
-#         sqlalchemy.Column('date', sqlalchemy.DateTime),
-#         sqlalchemy.Column('method', sqlalchemy.Text, nullable=False),
-#         sqlalchemy.Column('url', sqlalchemy.Text, nullable=False),
-#         sqlalchemy.Column('status', sqlalchemy.Integer, nullable=False),
-#         sqlalchemy.Column('bytes', sqlalchemy.Integer, nullable=True),
-#         sqlalchemy.Column('duration', sqlalchemy.Integer, nullable=True),
-#
-#     )
-#     sqlalchemy.Table("accesslog", meta, *columns)
-#     meta.create_all()
-#     table = sqlalchemy.table("accesslog", *columns)
-#
-#     statements = [
-#         table.insert().values(log_string)
-#         for log_string in lines
-#     ]
-#     [engine.execute(stmt) for stmt in statements]
+def log_reader(file_object, chunk_size=1024):
+    """
+    generator, reads a portion of lines from file
+    :param file_object: opened file obj
+    :param chunk_size:  lines from file to be read
+    :return: a portion of lines
+    """
+    ret = []
+    while True:
+        data = file_object.readline()
+        if not data:
+            yield ret
+            break
+        ret.append(data)
+        if len(ret) == chunk_size:
+            yield ret
+            ret = []
 
 
-def main():
-    lines = log_reader('logs/access-short.log')
-    # db_use(lines)
-    print(lines)
-    connection = sqlite3.connect('sqlite-db/db_logs.db')
+def write_to_base(connection, lines):
+    """
+    put a portion of formatted lines into the table
+    :param connection: sqlite db connect
+    :param lines: values to insert
+    :return:
+    """
     cursor = connection.cursor()
-    cursor.execute(CREATE_TABLE)
-    connection.commit()
-
-    fields_template = '?'*len(FIELD_NAMES)
+    fields_template = '?' * len(FIELD_NAMES)
     fields_template = ','.join(fields_template)
 
     ins_query = f"insert into accessShort ({','.join(FIELD_NAMES)}) values ({fields_template})"
@@ -117,8 +121,69 @@ def main():
         cursor.execute(ins_query, line)
     connection.commit()
 
+
+def get_some_analytics(connection):
+    # let's get some analytics
+    res = connection.cursor().execute(COUNT_ALL)
+    total_requests = res.fetchone()[0]
+
+    res = connection.cursor().execute(METHODS_COUNT)
+    total_stat = res.fetchall()
+
+    res = connection.cursor().execute(TOP3_DURATION)
+    top_longest = res.fetchall()
+
+    res = connection.cursor().execute(TOP3_IP)
+    top_ips = res.fetchall()
+
+    print(top_ips)
+    print(top_longest)
+    print(total_stat)
+    print(total_requests)
+
+
+def main():
+    # prepare a db
+    connection = sqlite3.connect('sqlite-db/db_logs3.db')
+    connection.cursor().execute(DROP_TABLE)
+    connection.cursor().execute(CREATE_TABLE)
+    for indx in CREATE_INDEX:
+        connection.cursor().execute(indx)
+    connection.commit()
+
+    counter = 1
+    # read a file first
+    with open('logs/access-short.log') as f:
+        bunch = log_reader(f)
+        for lines in bunch:
+            # print(lines)
+
+            # parse a bunch of lines - one by one, it takes time
+            parsed_lines = []
+            for line in lines:
+                try:
+                    parsed_lines.append(log_parser(line.rstrip()))
+                except PsLineInvalid as ex:
+                    print(ex)
+            # print(parsed_lines)
+
+            # put parsed strings into db
+            write_to_base(connection, parsed_lines)
+
+            # print a point as a sign of a life
+            print(".", end="")
+            if counter == 64:
+                print("\n")
+                counter = 1
+            counter += 1
+
+    get_some_analytics(connection)
+
     connection.close()
 
 
 if __name__ == '__main__':
+    start = datetime.now()
     main()
+    end = datetime.now()
+    # print("\n", "Finished. Total time was",  end - start)
