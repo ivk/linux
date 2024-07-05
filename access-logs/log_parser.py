@@ -128,23 +128,39 @@ def get_some_analytics(connection):
     total_requests = res.fetchone()[0]
 
     res = connection.cursor().execute(METHODS_COUNT)
-    total_stat = res.fetchall()
+    total_stat= {}
+    for stat in res.fetchall():
+        total_stat[stat[0]] = stat[1]
 
     res = connection.cursor().execute(TOP3_DURATION)
-    top_longest = res.fetchall()
+    top_longest = []
+    for stat in res.fetchall():
+        top_longest.append({"ip": stat[0], "date": stat[1], "method": stat[2], "url":stat[3], "duration": stat[4]})
 
     res = connection.cursor().execute(TOP3_IP)
-    top_ips = res.fetchall()
+    top_ips = {}
+    for stat in res.fetchall():
+        top_ips[stat[0]] = stat[1]
 
-    print(top_ips)
-    print(top_longest)
-    print(total_stat)
-    print(total_requests)
+    data = {
+        "top_ips": top_ips,
+        "top_longest": top_longest,
+        "total_stat": total_stat,
+        "total_requests": total_requests
+    }
+
+    return data
+
+
+def write_result(data):
+    with open('res/result.json', "w") as f:
+        s = json.dumps(data, indent=4)
+        f.write(s)
 
 
 def main():
     # prepare a db
-    connection = sqlite3.connect('sqlite-db/db_logs3.db')
+    connection = sqlite3.connect('sqlite-db/db_logs.db')
     connection.cursor().execute(DROP_TABLE)
     connection.cursor().execute(CREATE_TABLE)
     for indx in CREATE_INDEX:
@@ -153,7 +169,7 @@ def main():
 
     counter = 1
     # read a file first
-    with open('logs/access-short.log') as f:
+    with open('logs/access.log') as f:
         bunch = log_reader(f)
         for lines in bunch:
             # print(lines)
@@ -177,7 +193,8 @@ def main():
                 counter = 1
             counter += 1
 
-    get_some_analytics(connection)
+    data = get_some_analytics(connection)
+    write_result(data)
 
     connection.close()
 
@@ -186,4 +203,4 @@ if __name__ == '__main__':
     start = datetime.now()
     main()
     end = datetime.now()
-    # print("\n", "Finished. Total time was",  end - start)
+    print("\n", "Finished. Total time was",  end - start)
