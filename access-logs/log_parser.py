@@ -3,6 +3,9 @@ from collections import namedtuple
 from datetime import datetime
 import sqlite3
 import json
+import argparse
+import os
+
 
 FIELD_NAMES = ["ip", "date", "method", "url", "status", "bytes", "duration"]
 log_string = namedtuple("log_string", FIELD_NAMES)
@@ -11,7 +14,7 @@ log_string = namedtuple("log_string", FIELD_NAMES)
 reg = r"([\d\.]+)\s(.+)\s(.+)\s+\[(.+)\]\s\"(.*?)\"\s(\d+)\s(\d+|-)\s\"(.*?)\"\s\"(.*?)\"\s(\d+)"
 
 CREATE_TABLE = '''
-        CREATE TABLE IF NOT EXISTS accessShort (
+        CREATE TABLE IF NOT EXISTS {tblname} (
         id INTEGER PRIMARY KEY,
         ip TEXT NOT NULL,
         date datetime NOT NULL,
@@ -23,31 +26,30 @@ CREATE_TABLE = '''
     )
 '''
 CREATE_INDEX = (
-    "CREATE INDEX 'ip' ON 'accessShort' ('ip');",
-    "CREATE INDEX 'method' ON 'accessShort' ('method');",
-    "CREATE INDEX 'status' ON 'accessShort' ('status');",
-    "CREATE INDEX 'url' ON 'accessShort' ('url');"
+    "CREATE INDEX '{tblname}_ip' ON '{tblname}' ('ip');",
+    "CREATE INDEX '{tblname}_method' ON '{tblname}' ('method');",
+    "CREATE INDEX '{tblname}_status' ON '{tblname}' ('status');",
 )
 DROP_TABLE = '''
-    drop table if exists accessShort
+    drop table if exists {tblname}
 '''
 COUNT_ALL = '''
-    SELECT count(*) from accessShort 
+    SELECT count(*) from {tblname} 
 '''
 METHODS_COUNT = '''
     SELECT DISTINCT(method), count(*) 
-        from accessShort 
+        from {tblname} 
     group by method order by 2 desc
 '''
 TOP3_IP = '''
     SELECT distinct(ip), count(*) 
-        from accessShort 
+        from {tblname} 
     group by ip order by 2 desc 
     limit 3
 '''
 TOP3_DURATION = '''
     SELECT method, url, ip, duration, date 
-        from accessShort 
+        from {tblname} 
     order by duration desc limit 3
 '''
 
@@ -105,7 +107,7 @@ def log_reader(file_object, chunk_size=1024):
             ret = []
 
 
-def write_to_base(connection, lines):
+def write_to_base(connection, lines, table_name):
     """
     put a portion of formatted lines into the table
     :param connection: sqlite db connect
@@ -116,28 +118,33 @@ def write_to_base(connection, lines):
     fields_template = '?' * len(FIELD_NAMES)
     fields_template = ','.join(fields_template)
 
-    ins_query = f"insert into accessShort ({','.join(FIELD_NAMES)}) values ({fields_template})"
+    ins_query = f"insert into {table_name} ({','.join(FIELD_NAMES)}) values ({fields_template})"
     for line in lines:
         cursor.execute(ins_query, line)
     connection.commit()
 
 
-def get_some_analytics(connection):
-    # let's get some analytics
-    res = connection.cursor().execute(COUNT_ALL)
+def get_some_analytics(connection, table_name):
+    """
+    get some analytics
+    :param connection: connection obj
+    :param table_name: current table name
+    :return:
+    """
+    res = connection.cursor().execute(COUNT_ALL.replace('{tblname}', table_name))
     total_requests = res.fetchone()[0]
 
-    res = connection.cursor().execute(METHODS_COUNT)
+    res = connection.cursor().execute(METHODS_COUNT.replace('{tblname}', table_name))
     total_stat= {}
     for stat in res.fetchall():
         total_stat[stat[0]] = stat[1]
 
-    res = connection.cursor().execute(TOP3_DURATION)
+    res = connection.cursor().execute(TOP3_DURATION.replace('{tblname}', table_name))
     top_longest = []
     for stat in res.fetchall():
         top_longest.append({"ip": stat[0], "date": stat[1], "method": stat[2], "url":stat[3], "duration": stat[4]})
 
-    res = connection.cursor().execute(TOP3_IP)
+    res = connection.cursor().execute(TOP3_IP.replace('{tblname}', table_name))
     top_ips = {}
     for stat in res.fetchall():
         top_ips[stat[0]] = stat[1]
@@ -152,24 +159,60 @@ def get_some_analytics(connection):
     return data
 
 
-def write_result(data):
-    with open('res/result.json', "w") as f:
+def write_result(data, table_name):
+    """
+    put result data into a file
+    :param data: results
+    :param table_name:  for output file name
+    :return:
+    """
+    with open(f'res/{table_name}.json', "w") as f:
         s = json.dumps(data, indent=4)
         f.write(s)
+    print(json.dumps(data, indent=4))
 
 
-def main():
-    # prepare a db
-    connection = sqlite3.connect('sqlite-db/db_logs.db')
-    connection.cursor().execute(DROP_TABLE)
-    connection.cursor().execute(CREATE_TABLE)
-    for indx in CREATE_INDEX:
-        connection.cursor().execute(indx)
+def prepare_table(connection, table_name):
+    """
+    create connection, drop old table and create a new one.
+    One table for one file
+    :param connection:
+    :param table_name:
+    :return:
+    """
+    sql = DROP_TABLE.replace('{tblname}', table_name)
+    connection.cursor().execute(sql)
+
+    sql = CREATE_TABLE.replace('{tblname}', table_name)
+    connection.cursor().execute(sql)
+
     connection.commit()
 
+
+def create_indexes(connection, table_name):
+    """
+    create indexes for table
+    :param connection:
+    :param table_name:
+    :return:
+    """
+    for indx in CREATE_INDEX:
+        sql = indx.replace('{tblname}', table_name)
+        connection.cursor().execute(sql)
+
+
+def log_file_parser(filename, connection, table_name):
+    """
+    Read a portion of logfile strings, then parse them, insert into the table.
+    And count some useful data finally
+    :param filename:
+    :param connection:
+    :param table_name:
+    :return:
+    """
     counter = 1
     # read a file first
-    with open('logs/access.log') as f:
+    with open(filename) as f:
         bunch = log_reader(f)
         for lines in bunch:
             # print(lines)
@@ -184,23 +227,49 @@ def main():
             # print(parsed_lines)
 
             # put parsed strings into db
-            write_to_base(connection, parsed_lines)
+            write_to_base(connection, parsed_lines, table_name)
 
             # print a point as a sign of a life
-            print(".", end="")
-            if counter == 64:
-                print("\n")
-                counter = 1
-            counter += 1
+            # print(".", end="")
+            # if counter == 64:
+            #     print("\n")
+            #     counter = 1
+            # counter += 1
 
-    data = get_some_analytics(connection)
-    write_result(data)
+    create_indexes(connection, table_name)
+    data = get_some_analytics(connection, table_name)
+    write_result(data, table_name)
+
+
+def main(log):
+
+    connection = sqlite3.connect('sqlite-db/db_logs.db')
+
+    files = []
+
+    if os.path.isfile(log):
+        files = [log]
+    else:
+        for file in os.listdir(log):
+            files.append(os.path.abspath(log) + '/' + file)
+
+    for file in files:
+        table_name = str(os.path.basename(file)[:-4]).replace("-", "")
+        # print(table_name)
+        # print(os.path.abspath(file))
+        prepare_table(connection, table_name)
+        log_file_parser(os.path.abspath(file), connection, table_name)
 
     connection.close()
 
 
 if __name__ == '__main__':
     start = datetime.now()
-    main()
+
+    parser = argparse.ArgumentParser(description="Apache log parser. Usage: --log = file|directory")
+    parser.add_argument('-l', '--log')
+    args = parser.parse_args()
+    main(args.log)
+
     end = datetime.now()
     print("\n", "Finished. Total time was",  end - start)
