@@ -1,3 +1,10 @@
 /.venv/
 .idea
 .idea/*
+/access-logs/logs/
+/access-logs/logs2/
+/access-logs/sqlite-db/
+/ps-aux/*-scan.txt
+/access-logs/res/accessshort.json
+/access-logs/scratch.py
+/access-logs/res/tail.json
