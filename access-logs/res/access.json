@@ -1,0 +1,39 @@
+{
+    "top_ips": {
+        "193.106.31.130": 235209,
+        "198.50.156.189": 167812,
+        "5.112.235.245": 166722
+    },
+    "top_longest": [
+        {
+            "ip": "POST",
+            "date": "/administrator/index.php",
+            "method": "62.93.172.245",
+            "url": 10000,
+            "duration": "2015-12-23 07:27:57+01:00"
+        },
+        {
+            "ip": "GET",
+            "date": "/media/system/css/modal.css",
+            "method": "213.162.68.113",
+            "url": 10000,
+            "duration": "2016-01-06 18:47:57+01:00"
+        },
+        {
+            "ip": "GET",
+            "date": "/images/phocagallery/almhuette/thumbs/phoca_thumb_m_terasse.jpg",
+            "method": "194.166.55.43",
+            "url": 10000,
+            "duration": "2016-01-06 21:29:02+01:00"
+        }
+    ],
+    "total_stat": {
+        "GET": 2247848,
+        "POST": 918794,
+        "HEAD": 49971,
+        "PUT": 70,
+        "OPTIONS": 39,
+        "DELETE": 1
+    },
+    "total_requests": 3216723
+}
